@@ -164,13 +164,16 @@
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
             <option value="run" />
+            <option value="muse1.txt" />
+            <option value="muse2.txt" />
+            <option value="2" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -216,6 +219,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Gradle.ase_lab [build]" />
+      <item itemvalue="Gradle.ase_lab [distZip]" />
+      <item itemvalue="Gradle.ase_lab [jacocoTestReport]" />
+      <item itemvalue="Gradle.ase_lab [run]" />
+      <item itemvalue="Gradle.ase_lab [test]" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.ase_lab [run]" />
