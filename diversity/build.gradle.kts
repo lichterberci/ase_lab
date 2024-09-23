@@ -1,15 +1,5 @@
 plugins {
-    java
-    jacoco
-    application
-    `java-library`}
-
-java.toolchain {
-    languageVersion.set(JavaLanguageVersion.of(21))
-}
-
-repositories {
-    mavenCentral()
+    id("hu.bme.mit.ase.shingler.gradle.application")
 }
 
 val picoCliVersion = "4.7.6"
@@ -18,7 +8,7 @@ val log4jVersion = "2.23.1"
 val junitVersion = "5.10.0"
 
 dependencies {
-    implementation("org.slf4j:slf4j-api:$slf4jVersion")
+    implementation(libs.slf4j.api)
     implementation("info.picocli:picocli:$picoCliVersion")
 
     runtimeOnly("org.apache.logging.log4j:log4j-slf4j-impl:$log4jVersion")
@@ -29,18 +19,6 @@ dependencies {
 
     api(project(":lib"))
     api(project(":logic"))
-}
-
-tasks {
-    test {
-        useJUnitPlatform()
-        testLogging.showStandardStreams = true
-        finalizedBy(jacocoTestReport)
-    }
-
-    jacocoTestReport {
-        inputs.files(test.get().outputs)
-    }
 }
 
 application {
